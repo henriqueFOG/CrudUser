@@ -1,0 +1,32 @@
+<form [formGroup]="emailForm">
+  <mat-grid-list cols="6" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Assunto" formControlName="subject_matter">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <textarea matInput placeholder="Comentário" formControlName="comment"></textarea>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="name">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="Telefone" formControlName="tel">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput placeholder="E-mail" formControlName="email">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="sendEmail()">Enviar</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
