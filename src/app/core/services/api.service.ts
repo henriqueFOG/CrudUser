@@ -5,11 +5,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
 
   private url = "https://63a59f6af8f3f6d4abfb383d.mockapi.io/api-portfolio/sendEmail";
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   get(): Observable<any> {
     return this.http.get(this.url);

@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./features/user-management/user-management.module').then(m => m.UserManagementModule)
   },
+  {
+    path: 'produto',
+    loadChildren: () => import('./features/product/product-management.module').then(m => m.ProductManagementModule)
+  }
 ];
 
 @NgModule({

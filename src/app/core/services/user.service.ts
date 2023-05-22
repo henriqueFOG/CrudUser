@@ -4,6 +4,7 @@ import { of, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
   private users = [
     { id: 1, name: 'User 1' },

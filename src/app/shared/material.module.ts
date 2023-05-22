@@ -9,6 +9,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 // ... Outras importações do Angular Material conforme necessário
 
@@ -21,7 +22,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatTableModule,
     MatIconModule,
     MatFormFieldModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,7 +33,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatTableModule,
     MatIconModule,
     MatFormFieldModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }

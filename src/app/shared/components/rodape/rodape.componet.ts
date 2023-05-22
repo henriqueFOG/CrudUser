@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/core/services/api.service';
+import { GerenciamentoEstadoState } from 'src/app/core/state/gerenciamento-estado.state';
 
 @Component({
   selector: 'app-rodape',
@@ -14,7 +15,8 @@ export class RodapeComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private state: GerenciamentoEstadoState
     ) {
     this.emailForm = this.fb.group({
       subject_matter: ['', Validators.required],
@@ -30,9 +32,13 @@ export class RodapeComponent implements OnInit {
   }
 
   sendEmail(){
+    this.state.setTrueLoading();
     this.apiService.post(this.emailForm.value).subscribe(
       dados => {
         console.log(dados);
+      },
+      erro => {
+        this.state.setFalseLoading();
       }
     )
   }
