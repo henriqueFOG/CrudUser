@@ -25,7 +25,7 @@ export const getUserSuccess = createAction(
 export const getUserFailure = createAction(
   UserActionTypes.GetUserFailure,
   props<{ error: any }>()
-);
+); 
 
 export const createUser = createAction(
   UserActionTypes.CreateUser,
